@@ -4,7 +4,7 @@ export default {
     type:'document',
     fields:[
         {
-            name:'Product Name',
+            name:'productName',
             title:'Product Name',
             type:'string',
             description:'Field to input product name',
