@@ -1,5 +1,10 @@
+import {ChangeEvent, useCallback, useEffect } from "react";
+import { useRecoilState } from "recoil";
 import styled from "styled-components"
+import { productCostState, productDescriptionState, productNameState } from "../../state/productValueState";
+import theme from "../../theme/theme";
 import UploadImages from "./uploadImages";
+
 
 const UploadContainer = styled.main`
     background-color: ${(props )=> props.theme.colors.baseTint};
@@ -37,7 +42,28 @@ const FieldSet = styled.fieldset({
 
 
 export default function Upload(){
+    const  [productName, setProductName] = useRecoilState(productNameState)   
+    const [description, setDescription] = useRecoilState(productDescriptionState);
+    const [cost,setCost] = useRecoilState(productCostState);
+
+    const onNameChange = useCallback((event: ChangeEvent<HTMLInputElement>)=>
+        { 
+            setProductName(event.target.value); 
+
+        },[setProductName])
     
+    const onDescriptionChange = useCallback((event: ChangeEvent<HTMLInputElement>)=>
+    { 
+        setDescription(event.target.value); 
+
+    },[setDescription])
+
+    const onCostChange = useCallback((event: ChangeEvent<HTMLInputElement>)=>
+    { 
+        setCost(event.target.value); 
+
+    },[setCost])
+
 
     return(
         <UploadContainer>
@@ -46,15 +72,40 @@ export default function Upload(){
                     <legend>Product Data</legend>
                     <div className="settings">
                         <label htmlFor="productName">Product Name</label>
-                        <input className="inputSettings" type="text" name="Product Name" />
+                        <input 
+                            className="inputSettings" 
+                            value={productName} 
+                            type="text" 
+                            onChange={onNameChange}
+                            name="Product Name" />
                     </div>
                     <div className="settings">
                         <label htmlFor="productDescription">Description:</label>
-                        <input className="inputSettings" type="text"  name="Product Description" />
+                        <input className="inputSettings" 
+                            type="text"  
+                            name="Product Description"
+                            onChange={onDescriptionChange}
+                            value={description}
+                            />
                     </div>
                     <div className="settings">
                         <label htmlFor="productCost">Cost</label>
-                        <input className="inputSettings" type="text"  name="Product Cost" />
+                        <input className="inputSettings" 
+                            type="text"  
+                            onChange={onCostChange}
+                            value={cost}
+                            name="Product Cost" />
+                    </div>
+                    <div className="settings" style={{justifyContent:'center'}}>
+                        <button style={{width:'60%',
+                            paddingTop:'0.35rem',
+                            paddingBottom:'0.35rem',
+                            fontSize:'1.275rem',
+                            backgroundColor:'#12A8E0',
+                            color:'#f1ebe3',
+                            border:'none',
+                            borderRadius:'1rem'
+                            }}> Submit</button>
                     </div>
                     {/* <div className="settings">
                         <label htmlFor="productImage">Image</label>
@@ -65,3 +116,5 @@ export default function Upload(){
         </UploadContainer>
     )
 }
+
+

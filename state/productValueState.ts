@@ -1,16 +1,16 @@
 import { atom } from 'recoil';
 
-const productNameState = atom<string>({
+export const productNameState = atom<string>({
     key: 'productNameState',
     default: ''
 });
 
-const productDescriptionState = atom<string>({
+export const productDescriptionState = atom<string>({
     key: 'productDescriptionState',
     default: ''
 });
 
-const productCostState = atom<string>({
+export const productCostState = atom<string>({
     key: 'productCostState',
     default: ''
 });
