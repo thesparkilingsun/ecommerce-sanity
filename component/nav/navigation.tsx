@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import Upload from "../upload";
+import Upload from "../upload/upload";
 import Account from "./account";
 import Menu from "./menu";
 import Searchbar from "./searchBar";

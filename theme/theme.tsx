@@ -1,5 +1,5 @@
 import {ThemeProvider} from "styled-components"
-import { UseClient } from "../sanity/sanityDataset";
+
 
 
 const theme = {
@@ -11,9 +11,6 @@ const theme = {
       base:'#Fdfcfa',
       baseTint:'#f1ebe3',
       hoverColor:'#eee2e2cc'
-    },
-    client:{
-      useClient: UseClient()
     },
     shape:{
       radius:'2rem',

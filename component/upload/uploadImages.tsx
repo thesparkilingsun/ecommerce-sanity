@@ -1,14 +1,18 @@
-import { createRef, useState } from "react";
+import { useState } from "react";
+import styled from "styled-components";
+
+const Input = styled.input({
+    border:'none',
+    paddingLeft:'0.125rem',
+    marginLeft: '0.55rem',
+    
+})
+
 
 export default function UploadImages(){
     const [values, setValues] = useState({imagePreviewUrl:null,picFile:null});
-    
-    let fileInput = createRef();
-
-    //when user click submit to upload picture
-    const onPictureSubmit = ()=>{
-        fileInput.current.click();
-    }
+    console.log(values.imagePreviewUrl);
+    console.log(values.picFile)
     const imageUploadHandler = (e:any)=>{
         e.preventDefault();
         let reader = new FileReader();
@@ -22,5 +26,20 @@ export default function UploadImages(){
         reader.readAsDataURL(inFile);
     }
   
-    return null;
+    return (
+        <>
+            <Input className="inputSettings" type="file"  
+            name="Product Image" accept='image/*' 
+            onChange={imageUploadHandler}
+           />
+           <div>
+            <img 
+                src={values.imagePreviewUrl}
+                alt="..."
+                style={{objectFit:'contain'}}
+                />
+           </div>
+                        
+        </>
+    );
 }

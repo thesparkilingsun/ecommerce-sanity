@@ -1,6 +1,6 @@
 
 import Navigation from "../component/nav/navigation";
-import Upload from "../component/upload";
+import Upload from "../component/upload/upload";
 
 
 

@@ -2,10 +2,9 @@ import ProjectData from "../types/projectData";
 import Client from "./sanityClient";
 
 const project:ProjectData = {
-    projectId:"abcde",
-    dataset:'production',
-    apiVersion:'2021-12-01',
-    token:'null',
+    projectId:process.env.PROJECT_ID,
+    dataset:process.env.DATASET,
+    apiVersion:process.env.API_VERSION,
     useCdn:false,
 } 
 
