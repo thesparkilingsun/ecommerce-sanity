@@ -67,6 +67,10 @@ export default function Upload() {
         [setCost]
     );
 
+    const onSubmit = async ()=>{
+        
+    }
+
     return (
         <UploadContainer>
             <Form>
