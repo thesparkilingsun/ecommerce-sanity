@@ -1,24 +1,17 @@
-import '../styles/globals.css'
+import '../styles/globals.css';
 import { RecoilRoot } from 'recoil';
 import Theme from '../theme/theme';
-import {GlobalStyle}  from '../styles/globalStyles';
-
-
-
-
-
+import { GlobalStyle } from '../styles/globalStyles';
 
 function MyApp({ Component, pageProps }) {
-
-  return(
+    return (
         <RecoilRoot>
-          <Theme>
-          <GlobalStyle />
-            <Component {...pageProps} />
-          </Theme>
+            <Theme>
+                <GlobalStyle />
+                <Component {...pageProps} />
+            </Theme>
         </RecoilRoot>
-        )
-   
+    );
 }
 
-export default MyApp
+export default MyApp;

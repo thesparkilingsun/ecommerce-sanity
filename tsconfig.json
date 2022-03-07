@@ -1,33 +1,32 @@
 {
-  "compilerOptions": {
-    "target": "es5",
-    "lib": [
-      "dom",
-      "dom.iterable",
-      "esnext"
-    ],
-    "paths": {
-      "@mui/styled-engine": ["./node_modules/@mui/styled-engine-sc"]
+    "compilerOptions": {
+        "target": "es5",
+        "lib": ["dom", "dom.iterable", "esnext"],
+        "paths": {
+            "@mui/styled-engine": [
+                "./node_modules/@mui/styled-engine-sc"
+            ]
+        },
+        "allowJs": true,
+        "skipLibCheck": true,
+        "strict": false,
+        "forceConsistentCasingInFileNames": true,
+        "noEmit": true,
+        "incremental": true,
+        "esModuleInterop": true,
+        "module": "esnext",
+        "moduleResolution": "node",
+        "resolveJsonModule": true,
+        "isolatedModules": true,
+        "jsx": "preserve"
     },
-    "allowJs": true,
-    "skipLibCheck": true,
-    "strict": false,
-    "forceConsistentCasingInFileNames": true,
-    "noEmit": true,
-    "incremental": true,
-    "esModuleInterop": true,
-    "module": "esnext",
-    "moduleResolution": "node",
-    "resolveJsonModule": true,
-    "isolatedModules": true,
-    "jsx": "preserve"
-  },
-  "include": [
-    "next-env.d.ts",
-    "**/*.ts",
-    "**/*.tsx"
-, "sanityecom/schemas/schema.js", "next.config.js", "sanityecom/schemas/product.js"  ],
-  "exclude": [
-    "node_modules"
-  ]
+    "include": [
+        "next-env.d.ts",
+        "**/*.ts",
+        "**/*.tsx",
+        "sanityecom/schemas/schema.js",
+        "next.config.js",
+        "sanityecom/schemas/product.js"
+    ],
+    "exclude": ["node_modules"]
 }
