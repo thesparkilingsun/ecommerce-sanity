@@ -42,11 +42,8 @@ const FieldSet = styled.fieldset({
 });
 
 export default function Upload() {
-    const [productName, setProductName] =
-        useRecoilState(productNameState);
-    const [description, setDescription] = useRecoilState(
-        productDescriptionState
-    );
+    const [productName, setProductName] =useRecoilState(productNameState);
+    const [description, setDescription] = useRecoilState(productDescriptionState);
     const [cost, setCost] = useRecoilState(productCostState);
 
     const onNameChange = useCallback(
