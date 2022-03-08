@@ -9,5 +9,5 @@
     "trailingComma": "none",
     "bracketSameLine": true,
     "arrowParens": "always",
-    "endOfLine": "lf"
+    "endOfLine": "auto"
 }

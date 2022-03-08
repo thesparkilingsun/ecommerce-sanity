@@ -1,11 +1,13 @@
 import Navigation from '../component/nav/navigation';
-import Upload from '../component/upload/upload';
+import Display from '../component/upload/display';
+import  Content  from './api/content';
 
 export default function Home() {
     return (
         <main id='Container'>
             <Navigation />
-            <Upload />
+            <Display />
+            <Content />
         </main>
     );
 }

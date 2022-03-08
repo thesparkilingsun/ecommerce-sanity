@@ -3,6 +3,7 @@ import { RecoilRoot } from 'recoil';
 import Theme from '../theme/theme';
 import { GlobalStyle } from '../styles/globalStyles';
 
+
 function MyApp({ Component, pageProps }) {
     return (
         <RecoilRoot>

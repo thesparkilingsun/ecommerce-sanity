@@ -1,8 +1,22 @@
-import { UseClient } from '../../sanity/sanityDataset';
+import sanityClient from "../../sanity/sanity-client";
 
-export async function getStaticProps() {
-    const client = UseClient();
-    const result = await client.fetch(`
-    *[type=="product" && document.current == $document][0]
- `);
+
+ export default function Content(props:any){  
+    
+    console.log(props)
+        return (<span>
+            Nothing
+        </span>
+            
+        )
+ }
+
+  export async function getStaticProps () {
+      
+    const product = await sanityClient.get('product','productOne');
+    const {productName,productCost} = product;
+    
+    return {
+        props: productName
+    };
 }
