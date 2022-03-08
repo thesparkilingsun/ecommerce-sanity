@@ -1,39 +1,39 @@
 import type {
-  SanityReference,
-  SanityKeyedReference,
-  SanityAsset,
-  SanityImage,
-  SanityFile,
-  SanityGeoPoint,
-  SanityBlock,
-  SanityDocument,
-  SanityImageCrop,
-  SanityImageHotspot,
-  SanityKeyed,
-  SanityImageAsset,
-  SanityImageMetadata,
-  SanityImageDimensions,
-  SanityImagePalette,
-  SanityImagePaletteSwatch,
-} from "sanity-codegen";
+    SanityReference,
+    SanityKeyedReference,
+    SanityAsset,
+    SanityImage,
+    SanityFile,
+    SanityGeoPoint,
+    SanityBlock,
+    SanityDocument,
+    SanityImageCrop,
+    SanityImageHotspot,
+    SanityKeyed,
+    SanityImageAsset,
+    SanityImageMetadata,
+    SanityImageDimensions,
+    SanityImagePalette,
+    SanityImagePaletteSwatch
+} from 'sanity-codegen';
 
 export type {
-  SanityReference,
-  SanityKeyedReference,
-  SanityAsset,
-  SanityImage,
-  SanityFile,
-  SanityGeoPoint,
-  SanityBlock,
-  SanityDocument,
-  SanityImageCrop,
-  SanityImageHotspot,
-  SanityKeyed,
-  SanityImageAsset,
-  SanityImageMetadata,
-  SanityImageDimensions,
-  SanityImagePalette,
-  SanityImagePaletteSwatch,
+    SanityReference,
+    SanityKeyedReference,
+    SanityAsset,
+    SanityImage,
+    SanityFile,
+    SanityGeoPoint,
+    SanityBlock,
+    SanityDocument,
+    SanityImageCrop,
+    SanityImageHotspot,
+    SanityKeyed,
+    SanityImageAsset,
+    SanityImageMetadata,
+    SanityImageDimensions,
+    SanityImagePalette,
+    SanityImagePaletteSwatch
 };
 
 /**
@@ -42,47 +42,47 @@ export type {
  *
  */
 export interface Product extends SanityDocument {
-  _type: "product";
+    _type: 'product';
 
-  /**
-   * Product Name — `string`
-   *
-   * Field to input product name
-   */
-  productName?: string;
+    /**
+     * Product Name — `string`
+     *
+     * Field to input product name
+     */
+    productName: string;
 
-  /**
-   * Product Description — `string`
-   *
-   * Describe the type and features of the product
-   */
-  productDescription?: string;
+    /**
+     * Product Description — `string`
+     *
+     * Describe the type and features of the product
+     */
+    productDescription: string;
 
-  /**
-   * Product Cost — `string`
-   *
-   * Cost of the item
-   */
-  productCost?: string;
+    /**
+     * Product Cost — `string`
+     *
+     * Cost of the item
+     */
+    productCost: string;
 
-  /**
-   * Slug — `slug`
-   *
-   *
-   */
-  slug?: { _type: "slug"; current: string };
+    /**
+     * Slug — `slug`
+     *
+     *
+     */
+    slug: { _type: 'slug'; current: string };
 
-  /**
-   * Product Image — `image`
-   *
-   *
-   */
-  productImage?: {
-    _type: "image";
-    asset: SanityReference<SanityImageAsset>;
-    crop?: SanityImageCrop;
-    hotspot?: SanityImageHotspot;
-  };
+    /**
+     * Product Image — `image`
+     *
+     *
+     */
+    productImage?: {
+        _type: 'image';
+        asset: SanityReference<SanityImageAsset>;
+        crop?: SanityImageCrop;
+        hotspot?: SanityImageHotspot;
+    };
 }
 
 export type Documents = Product;

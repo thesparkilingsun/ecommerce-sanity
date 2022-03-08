@@ -1,22 +1,15 @@
+import { GetStaticProps } from "next";
 import sanityClient from "../../sanity/sanity-client";
 
 
- export default function Content(props:any){  
-    
-    console.log(props)
+ export default function Content({props}:{props:string}){  
+     
+    console.log("PROPS",props)
         return (<span>
-            Nothing
+            {props.length}
         </span>
             
         )
  }
 
-  export async function getStaticProps () {
-      
-    const product = await sanityClient.get('product','productOne');
-    const {productName,productCost} = product;
-    
-    return {
-        props: productName
-    };
-}
+

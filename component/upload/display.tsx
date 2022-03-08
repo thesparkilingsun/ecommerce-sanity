@@ -69,7 +69,7 @@ export default function Display() {
         },
         [setCost]
     );
-
+  
    
 
     return (
