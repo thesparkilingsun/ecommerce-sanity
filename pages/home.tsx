@@ -1,13 +1,11 @@
-import MainContent from "../components/main";
-import Navigation from "../components/navBar";
+import MainContent from '../components/main'
+import Navigation from '../components/navBar'
 
-
-
-export default function HomePage() {
-    return(
+export default function HomePage () {
+  return (
          <>
         <Navigation />
         <MainContent />
         </>
-    )
+  )
 }

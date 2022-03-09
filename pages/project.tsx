@@ -1,3 +1,3 @@
 export default function Project () {
-    return <> project </>
+  return <> project </>
 }

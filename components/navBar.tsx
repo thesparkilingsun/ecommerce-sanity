@@ -1,6 +1,6 @@
 import Link from 'next/link'
 import styled from 'styled-components'
-import { SocialIcon } from 'react-social-icons';
+import { SocialIcon } from 'react-social-icons'
 
 const Container = styled.div`
     height:100%;
@@ -8,7 +8,7 @@ const Container = styled.div`
     font-size: 1.2rem;
     display:flex;
     justify-content:space-between ;
-    background-color: ${( { theme } )=> theme.images.bgcolor};;
+    background-color: ${({ theme }) => theme.images.bgcolor};;
 `
 
 const NavigationBar = styled.nav`
@@ -31,19 +31,18 @@ const NavLink = styled(Link)`
     font-weight:bold ;
     
      & a >:hover{
-        background-color: ${( { theme } )=> theme.images.bgcolor || 'white'};
+        background-color: ${({ theme }) => theme.images.bgcolor || 'white'};
     }
     &a :link{
-        background-color: ${( { theme } )=> theme.images.bgcolor};
+        background-color: ${({ theme }) => theme.images.bgcolor};
     }
     
    
 
 `
 
-export default function Navigation () { 
-    
-    return (
+export default function Navigation () {
+  return (
     <header>
         <Container >
             <NavigationBar>
@@ -53,8 +52,8 @@ export default function Navigation () {
                 <NavLink href="/about">
                     <a>About</a>
                 </NavLink>
-                <NavLink href="/">
-                    <a>Skills</a>
+                <NavLink href="/post">
+                    <a>Post</a>
                 </NavLink>
                 <NavLink href="/">
                     <a>Resume</a>
@@ -64,9 +63,9 @@ export default function Navigation () {
                 </NavLink>
             </NavigationBar>
             <div>
-                <SocialIcon url="https://www.youtube.com/watch?v=NO7_jgzVgbc" target="_blank" fgColor='#fff' style={{height:'35px', width:'35px'}} />
-                <SocialIcon url="https://github.com/thesparkilingsun" target="_blank" fgColor='#fff' style={{height:'35px', width:'35px'}} />
-                <SocialIcon url="https://www.linkedin.com/" target="_blank" fgColor='#fff' style={{height:'35px', width:'35px'}} />
+                <SocialIcon url="https://www.youtube.com/watch?v=NO7_jgzVgbc" target="_blank" fgColor='#fff' style={{ height: '35px', width: '35px' }} />
+                <SocialIcon url="https://github.com/thesparkilingsun" target="_blank" fgColor='#fff' style={{ height: '35px', width: '35px' }} />
+                <SocialIcon url="https://www.linkedin.com/" target="_blank" fgColor='#fff' style={{ height: '35px', width: '35px' }} />
             </div>
         </Container>
     </header>)

@@ -34,7 +34,6 @@ const theme = {
     },
 }
 
-
 function MyApp ({ Component, pageProps }: AppProps) {
     return (<>
     <GlobalStyle />

@@ -1,3 +1,3 @@
 export default function About () {
-    return <span>About</span>
-} 
+  return <span>About</span>
+}

@@ -1,7 +1,6 @@
 import styled from 'styled-components'
 import Image from 'next/image'
 
-
 const Main = styled.main`
     background-size:cover;
     background-repeat:no-repeat;
@@ -11,7 +10,7 @@ const Main = styled.main`
 `
 
 export default function MainContent () {
-    return (
+  return (
         <Main>
             <Image src={'/public/1.jpg'} height={500} width={1024} />
             <section>
